@@ -53,5 +53,7 @@ function getYearlyReport() {
 
     return yearlyTotals
 }
-
-console.log(getYearlyReport())
+if (progress.argv[2] == undefined) { console.log("Pass in 'yearly' or 'montly' or 'weekly' to get report. (without quotes)") }
+if (progress.argv[2] == 'yearly') { console.log(getYearlyReport) }
+if (progress.argv[2] == 'monthly') { console.log(getMonthlyTotals) }
+if (progress.argv[2] == 'weekly') { console.log(getWeeklyTotals) }
